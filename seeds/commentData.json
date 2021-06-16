@@ -1,0 +1,27 @@
+[
+  {
+    "blog_comment": "I recently learned the true benefits of the MVC architecture!",
+    "user_id": 1,
+    "post_id": 1
+  },
+  {
+    "blog_comment": "Authorization on the Back-End is so important!",
+    "user_id": 2,
+    "post_id": 2
+  },
+  {
+    "blog_comment": "This REALLY simplifies the creation of SQL queries!",
+    "user_id": 3,
+    "post_id": 3
+  },
+  {
+    "blog_comment": "Segregating into Model vs View vs Controller logic works in a team environment.",
+    "user_id": 2,
+    "post_id": 1
+  },
+  {
+    "blog_comment": "Authentication on the Front-End is also important!",
+    "user_id": 1,
+    "post_id": 2
+  }
+]

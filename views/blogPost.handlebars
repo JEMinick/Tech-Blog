@@ -1,0 +1,20 @@
+
+{{> blogpostdetail post}}
+
+{{> comments post.blog_comments}}
+
+{{#if loggedIn}}
+<div class="card">
+  <h3 class="card-header"></h3>
+  <form class="card-body comment-form" id="addBlogComment">
+
+    <label class="form-label">Add your comment:</label>
+    <input id="comment" name="comment-body" class="form-input" />
+
+    {{!-- <button type="button" class="btn" id="addBlogComment">Submit</button> --}}
+    <button type="submit" class="btn" id="save-comment-btn" >Save Comment</button>
+
+  </form>
+</div>
+<script src="/js/comment.js"></script>
+{{/if}}
