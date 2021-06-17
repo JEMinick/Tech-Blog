@@ -419,13 +419,19 @@ button {
   margin: 0;
 }
 
+header {
+  color: white;
+  background-color: #4527a0;
+}
+
 a {
-  color: #1b89bc;
+  color: white; /* #1b89bc; */
+  background-color: #4527a0;
   text-decoration: none;
 }
 
 a:hover {
-  color: #065b83;
+  color: rgba(248, 242, 242, 0.555);  /* #065b83; */
   text-decoration: underline;
 }
 

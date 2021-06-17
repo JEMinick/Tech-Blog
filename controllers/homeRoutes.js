@@ -113,7 +113,7 @@ router.get('/', (req, res) => {
   })
   .then(dbBlogPosts => {
     const blogposts = dbBlogPosts.map(subject => subject.get({ plain: true }));
-      //console.log( blogposts );
+      // console.log( blogposts );
       if ( !req.session.loggedIn )
         req.session.loggedIn = false;
       res.render('homepage', { blogposts, loggedIn: req.session.loggedIn });    })
@@ -170,8 +170,8 @@ router.get('/blogpost/:id', (req, res) => {
       return;
     }
     const post = blogPostInfo.get({ plain: true });
-    console.log(post);
-    console.log( `Logged In? [${req.session.loggedIn}] : Rendering: blogPost...` );
+    // console.log(post);
+    // console.log( `Logged In? [${req.session.loggedIn}] : Rendering: blogPost...` );
     res.render('blogPost', { post, loggedIn: req.session.loggedIn });
   })
   .catch(err => {

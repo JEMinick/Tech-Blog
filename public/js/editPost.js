@@ -3,18 +3,17 @@ async function editBlogHandler(event) {
 
   const title = document.querySelector('input[name="post-title"]').value.trim();
   const content = document.querySelector('input[name="content"]').value.trim();
-  console.log( "Subject:" );
-  console.log(title);
-  console.log( "Description:" );
-  console.log(content);
-
-  console.log( `\n${window.location.toString()}\n` );
+  
+  // console.log( "Subject:" );
+  // console.log(title);
+  // console.log( "Description:" );
+  // console.log(content);
 
   const id = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
   ];
   
-  console.log( `Update BLOG [#${id}]...` );
+  // console.log( `Update BLOG [#${id}]...` );
 
   const response = await fetch(`/dashboard/update/${id}`, {
     method: 'PUT',

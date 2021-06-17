@@ -33,7 +33,7 @@ router.get('/', withAuth, (req, res) => {
   })
   .then(blogPostData => {
     const userBlogPosts = blogPostData.map(post => post.get({ plain: true }));
-    res.render('dashboard', { userBlogPosts, loggedIn: true });
+    res.render('dashboard', { userBlogPosts, loggedIn: true, isDashboard: true });
   })
   .catch(err => {
     console.log(err);
@@ -74,7 +74,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
     }
 
     const blogPost = blogPostInfo.get({ plain: true });
-    res.render('editPost', { blogPost, loggedIn: true });
+    res.render('editPost', { blogPost, loggedIn: true, isDashboard: true });
   })
   .catch(err => {
     console.log(err);
@@ -90,8 +90,8 @@ router.get('/edit/:id', withAuth, (req, res) => {
 //     description
 
 router.put('/update/:id', withAuth, (req, res) => {
-  console.log( `PUT blog: [${req.params.id}]` );
-  console.log( JSON.stringify( req.body ) );
+  // console.log( `PUT blog: [${req.params.id}]` );
+  // console.log( JSON.stringify( req.body ) );
   BlogPost.update({
     subject: req.body.subject,
     description: req.body.description
@@ -124,7 +124,7 @@ router.get('/new', (req, res) => {
 // DELETE an existing blog:
 
 router.delete('/:id', withAuth, async (req, res) => {
-  console.log( `DELETE Blog: [${req.params.id}]` );
+  // console.log( `DELETE Blog: [${req.params.id}]` );
   await BlogPost.destroy({
     where: {
       id: req.params.id

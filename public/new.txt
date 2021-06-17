@@ -6,7 +6,7 @@ async function blogCommentHandler(event) {
   const postId = document.querySelector('input[name="post-id"]').value;
   
   console.log(comment_text, 'line 10');
-
+  
   console.log(postId, "line 12");
 
   if (comment_text) {
