@@ -30,11 +30,13 @@ router.get('/:id', (req, res) => {
 router.post('/', withAuth, (req, res) => {
   if (req.session) {
     BlogComment.create({
-      blog_comment: req.body.blog_comment,
-      post_id: req.body.post_id,
+      blog_comment: req.body.comment_text,
+      post_id: req.body.postId,
       user_id: req.session.user_id,
     })
-    .then(dbCommentData => res.json(dbCommentData))
+    .then(dbCommentData => {
+      res.json(dbCommentData)
+    })
     .catch(err => {
       console.log(err);
       res.status(400).json(err);
