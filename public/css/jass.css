@@ -1,3 +1,12 @@
+:root {
+  --white: #fff;
+  --dark-blue: #0d47a1;
+  --medium-blue: #1565c0;
+  --light-blue: #e3f2fd;
+  /* font-size: large; */
+}
+
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -420,13 +429,13 @@ button {
 }
 
 header {
-  color: white;
-  background-color: #4527a0;
+  color: var(--light-blue); /* white; */
+  background-color: var(--dark-blue); /* #4527a0; */
 }
 
 a {
-  color: white; /* #1b89bc; */
-  background-color: #4527a0;
+  color: var(--light-blue); /* white; */
+  background-color: var(--dark-blue); /* #4527a0; */
   text-decoration: none;
 }
 
@@ -1093,8 +1102,10 @@ a:hover {
 
 .card .card-header {
   padding: 0.375rem;
-  background-color: #2d3e50;
-  color: #d9e9e8;
+  /* background-color: #2d3e50; */
+  /* color: #d9e9e8; */
+  color: var(--light-blue); /* white; */
+  background-color: var(--dark-blue); /* #4527a0; */
 }
 
 .card .card-body {
